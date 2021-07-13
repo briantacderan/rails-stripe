@@ -1,0 +1,19 @@
+  <article>
+      
+    <% if flash[:error].present? %>
+      <div id="error_explanation">
+        <p><%= flash[:error] %></p>
+      </div>
+    <% end %>
+      
+    <label class="amount">
+      <span>Cart total: <%= pretty_amount(@amount) %></span>
+    </label>
+      
+  </article>
+
+<button>
+  <span>
+    <%= link_to "Checkout", stripe_finalize_path %>
+  </span>
+</button>

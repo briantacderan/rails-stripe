@@ -1,0 +1,11 @@
+<h3>Hello, <%= @user.email %></h3>
+<h2>Home Page</h2>
+
+<button>
+  <div></div>
+  <span>
+    <%= link_to "Shopping cart", stripe_cart_path %>
+  </span>
+</button>
+    
+<%= link_to "Log out", destroy_user_session_path, resource_name: @user %>
